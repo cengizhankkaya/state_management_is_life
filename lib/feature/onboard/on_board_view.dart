@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:state_management_is_life/feature/login/view/login_view.dart';
 import 'package:state_management_is_life/feature/onboard/onboard_model.dart';
 import 'package:state_management_is_life/feature/onboard/tab_indicator.dart';
+import 'package:state_management_is_life/product/model/state/project_context.dart';
 import 'package:state_management_is_life/product/padding/page_padding.dart';
 import 'package:state_management_is_life/product/widget/onboard_card.dart';
+import 'package:kartal/kartal.dart';
+import '../../product/model/state/user_context.dart';
 part 'module/start_fab_button.dart';
 
 class OnBoardView extends StatefulWidget {
@@ -66,7 +71,7 @@ class _OnBoardViewState extends State<OnBoardView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _appBar(),
+      appBar: _appBar(context),
       body: Padding(
         padding: PagePadding.all(),
         child: Column(
@@ -90,10 +95,11 @@ class _OnBoardViewState extends State<OnBoardView> {
     );
   }
 
-  AppBar _appBar() {
+  AppBar _appBar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
+      title: Text(context.watch<ProductContext>().newUserName),
       systemOverlayStyle: SystemUiOverlayStyle.dark,
       actions: [
         ValueListenableBuilder<bool>(
@@ -101,7 +107,15 @@ class _OnBoardViewState extends State<OnBoardView> {
           builder: (BuildContext context, bool value, Widget? child) {
             return value
                 ? SizedBox()
-                : TextButton(onPressed: () {}, child: Text(_skipTile));
+                : TextButton(
+                    onPressed: () {
+                      context.read<ProductContext>().changeName('cengizhan ');
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => LoginView()),
+                      );
+                    },
+                    child: Text(_skipTile),
+                  );
           },
         ),
       ],
