@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:state_management_is_life/feature/login/view/login_view.dart';
+import 'package:state_management_is_life/feature/maps/view/map_select_view.dart';
 import 'package:state_management_is_life/feature/onboard/on_board_view.dart';
 import 'package:state_management_is_life/product/model/state/project_context.dart';
 import 'package:state_management_is_life/product/model/state/user_context.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        home: const OnBoardView(),
+        home: MapSelectView(),
         theme: ThemeData.light().copyWith(
           appBarTheme: AppBarTheme(
             elevation: 0,

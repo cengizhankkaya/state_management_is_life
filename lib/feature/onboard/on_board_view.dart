@@ -7,8 +7,7 @@ import 'package:state_management_is_life/feature/onboard/tab_indicator.dart';
 import 'package:state_management_is_life/product/model/state/project_context.dart';
 import 'package:state_management_is_life/product/padding/page_padding.dart';
 import 'package:state_management_is_life/product/widget/onboard_card.dart';
-import 'package:kartal/kartal.dart';
-import '../../product/model/state/user_context.dart';
+
 part 'module/start_fab_button.dart';
 
 class OnBoardView extends StatefulWidget {

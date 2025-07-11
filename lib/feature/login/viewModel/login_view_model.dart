@@ -21,6 +21,5 @@ class LoginViewModel extends ChangeNotifier {
     await Future.delayed(const Duration(seconds: 1));
     _changeLoading();
     return _inputText != null;
-    ;
   }
 }

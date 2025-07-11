@@ -30,6 +30,7 @@ class _TabIndicatorState extends State<TabIndicator>
     );
   }
 
+  @override
   Widget build(BuildContext context) {
     return TabPageSelector(controller: _tabController);
   }
