@@ -130,13 +130,6 @@ flutter test
 - **Bloc:** Travel sekmesinde destinasyon arama ve listeleme
 - **MobX:** Harita ekranında marker ve kart yönetimi
 
----
-
-## 📸 Ekran Görüntüleri
-
-> (Buraya uygulama ekran görüntülerinizi ekleyebilirsiniz)
-
----
 
 ## 🔑 Google Maps API Anahtarı
 
