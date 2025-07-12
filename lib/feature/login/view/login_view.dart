@@ -45,7 +45,7 @@ class _LoginViewState extends State<LoginView> {
                         ? 0
                         : MediaQuery.of(context).size.height * 0.3,
                     width: MediaQuery.of(context).size.width * 0.3,
-                    child: ImageEnums.pro.toImage,
+                    child: ImageEnums.door.toImage,
                   ),
                   Text(Login, style: Theme.of(context).textTheme.headlineLarge),
                   TextField(decoration: ProjectInputs(username)),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:state_management_is_life/feature/maps/model/map_model.dart';
 import 'package:state_management_is_life/feature/maps/services/map_services.dart';
 import 'package:state_management_is_life/feature/maps/viewmodel/map_view_model.dart';
 import 'package:state_management_is_life/product/init/network_product.dart';
